@@ -95,8 +95,9 @@ def main(page: ft.Page):
     botao_enviar = ft.ElevatedButton(text="Enviar Tarefa", color="white", on_click=enviar_tarefa, bgcolor=ft.colors.GREEN)
     botao_refresh = ft.ElevatedButton(text="Refresh", color="white", on_click=carregar_tarefas, bgcolor=ft.colors.ORANGE)
 
-    # Container de lista de tarefas
-    lista_tarefas = ft.Column(spacing=10)
+    # ListView para a lista de tarefas com suporte a rolagem
+    lista_tarefas = ft.ListView(expand=True, spacing=10)
+
     carregar_tarefas()  # Carrega as tarefas inicialmente
 
     # Adiciona os componentes à página
@@ -105,7 +106,7 @@ def main(page: ft.Page):
             [
                 titulo_app,
                 ft.Row([campo_relato, botao_falar, botao_enviar, botao_refresh], spacing=10),
-                lista_tarefas,
+                lista_tarefas,  # ListView com rolagem
             ],
             expand=True,
             spacing=20,
