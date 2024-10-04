@@ -37,33 +37,33 @@ Certifique-se de que você tem os seguintes requisitos instalados:
 
 ### Instalação
 1. Instalar Dependências dentro de uma virtualenv
-Certifique-se de ter o pip instalado. Em seguida, instale as dependências do backend:
-pip install virtualenv
-python -m venv <"nome_da_env">
-<"nome_da_env">/Scripts/activate ou source <"nome_da_env">/bin/activate em linux
-pip install -r requirements.txt
+- Certifique-se de ter o pip instalado. Em seguida, instale as dependências do backend:
+- pip install virtualenv
+- python -m venv <"nome_da_env">
+- <"nome_da_env">/Scripts/activate ou source <"nome_da_env">/bin/activate em linux
+- pip install -r requirements.txt
 
 2. Configurar o Tesseract OCR
-Para utilizar o Tesseract OCR no backend, você precisa instalá-lo no seu sistema.
+- Para utilizar o Tesseract OCR no backend, você precisa instalá-lo no seu sistema.
 
-Windows: Baixe e instale o Tesseract **[aqui](https://github.com/UB-Mannheim/tesseract/wiki)**.
-Linux: sudo apt-get install tesseract-ocr
-macOS: brew install tesseract
+- Windows: Baixe e instale o Tesseract **[aqui](https://github.com/UB-Mannheim/tesseract/wiki)**.
+- Linux: sudo apt-get install tesseract-ocr
+- macOS: brew install tesseract
 
-Adicione o caminho do executável Tesseract ao PATH do sistema.
-Ou defina manualmente no código: pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-No local que você instalou o Tesseract (apenas para windows)
+- Adicione o caminho do executável Tesseract ao PATH do sistema.
+- Ou defina manualmente no código: pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+- No local que você instalou o Tesseract (apenas para windows)
 
 3. Configuração da API do Google Generative AI
-Obtenha a chave de API no Google Cloud Console.
-No backend, crie um arquivo apikey.py e adicione a chave da API: APIKEYGEMINI = "sua-chave-de-api-aqui"
+- Obtenha a chave de API no Google Cloud Console.
+- No backend, crie um arquivo apikey.py e adicione a chave da API: APIKEYGEMINI = "sua-chave-de-api-aqui"
 
 4. Migrar o Banco de Dados e rodar do Backend
-Depois de configurar os modelos no app tasks, migre o banco de dados:
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver 
+- Depois de configurar os modelos no app tasks, migre o banco de dados:
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py runserver 
 
 5. Rodar o front em Flet
-python main.py
-python ocr_tela.py
+- python main.py
+- python ocr_tela.py
